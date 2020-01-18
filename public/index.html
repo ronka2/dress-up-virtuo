@@ -1,24 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>CSS/HTML Workshop with govirtuo.com</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+
   </head>
-  <body>
-    <div id="car">
-      <input class="js-name" type="text" placeholder="Car name"/>
-      <input class="js-price-by-day" type="number" placeholder="Price by day"/>
-      <input class="js-price-by-km" type="number" placeholder="Price by km"/>
+  <body class="background">
+  <div class="card-panel red lighten-1 " id="up">
+    <h2 class="center-align">Calculateur de frais</h2>
+  </div>
+  <div >
+    <div>
+      <div class="row red lighten-4 container ">
+        <div id="car">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s4">
+                <i class="material-icons prefix">directions_car</i>
+                <input class="js-name validate" type="text" id="car_name">
+                <label for="car_name">Car name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <i class="material-icons prefix">euro</i>
+                <input class="js-price-by-km" type="number" id="price_by_kilometer">
+                <label for="price_by_kilometer">Price by km</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="js-price-by-day" type="number" id="price_by_day">
+                <label for="price_by_day">Price by day</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="rental">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s4">
+                <i class="material-icons prefix">account_circle</i>
+                <input class="js-name" type="text" id="driver_name">
+                <label for="driver_name">Driver name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <i class="material-icons prefix">date_range</i>
+                <input class="js-begin" type="date" id="rental_begin_date"/>
+                <label for="rental_begin_date">Rental begin date</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="js-end" type="date" id="rental_end_date"/>
+                <label for="rental_end_date">Rental end date</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="js-distance" type="number" id="distance_in_km"/>
+                <label for="distance_in_km">Distance in km</label>
+              </div>
+              <div class="input-field col s4">
+                <p>
+                  <label>
+                    <input class="js-option" type="checkbox" />
+                    <span>Deductible option</span>
+                  </label>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <button  class="btn waves-effect waves-light" id="compute">Compute</button>
+      </div>
     </div>
-    <div id="rental">
-      <input class="js-name" type="text" placeholder="Driver name"/>
-      <input class="js-begin" type="date" placeholder="Rental begin date"/>
-      <input class="js-end" type="date" placeholder="Rental end date"/>
-      <input class="js-distance" type="number" placeholder="Distance in km"/>
-      <input class="js-option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script src="virtuo.js"></script>
-    <script src="index.js"></script>
+    <div ><blockquote id="actors" class="red lighten-4 container"></blockquote></div>
+  </div>
+    <script type="text/javascript" src="JS/materialize.min.js"></script>
+    <script src="JS/virtuo.js"></script>
+    <script src="JS/index.js"></script>
   </body>
 </html>

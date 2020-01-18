@@ -1,0 +1,17 @@
+.background{
+    background-color: #FFCDD2;
+    height: 100%;
+    width: 100%;
+}
+
+.repText
+{
+    size: 20px;
+    align-content: center;
+
+}
+
+#up{
+
+    transform: translate(0%, -5%);
+}
